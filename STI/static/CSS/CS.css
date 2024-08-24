@@ -1,0 +1,24 @@
+div ul{
+  list-style-type: none; 
+}
+
+div li a{
+  text-decoration: none;    
+}
+
+li a:link{
+  color: #ffffff;
+}
+
+li a:visited{
+color: pink;
+}
+
+li a:active{
+color: red;
+}
+
+li a:hover{
+background-color: #000000;
+color: #ffffff;
+} 

@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% block head %}
+        <meta charset="utf-8">
+        <meta name="viewpor" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="class project">
+        <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='CSS/CS.css') }}">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+      
+
+        <title>{% block title %}{% endblock title %}</title>
+        {% endblock head %}
+    </head>
+    <body>
+        <div>
+        {% block content %}
+            {% endblock content %}
+        </div><br/>
+            
+        <footer class="bg-dark text-white text-center py-3">
+            {% block footer %}
+            &copy; Copyright 2024 by <a href="https://school.mildredgroup.com">School Of Programming and Software Development</a> 
+            {% endblock footer %}
+        </footer>
+        <marquee width="100%" direction="left" height="30%" style="color: red;">
+            Enroll At The SCHOOL OF PROGRAMMING AND SOFTWARE DEVELOPMENT (MildredGroup) for your programming carrier. Expand your horizon in the field of Technology. To learn more, Please visit: Facebook: https://www.facebook.com/schoolofprogrammingandsoftwaredevelopment, LinkedIn: https://www.linkedin.com/company/91593618/admin/, Instagram: https://www.instagram.com/mildredojomah/
+         </marquee>
+
+         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html> 
+

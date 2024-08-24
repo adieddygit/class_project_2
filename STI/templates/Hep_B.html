@@ -1,0 +1,168 @@
+{% extends "base.html" %}
+<meta name="description" content="Case Reporting For Hep B In Preganacy">
+{% block title %} Hepatitis B {% endblock title %}
+{% block head %}
+{{super()}}
+{% endblock head %}
+{% block content %}
+    
+    
+    <header class="bg-primary text-white text-center py-5">
+        <h1>Hepatitis B Infected Pregnant Woman Reporting Form</h1>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button> 
+        <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+         <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+        </li>
+         <li class="nav-item active">
+            <a class="nav-link" href="../index.html">Logout</a>
+        </li>
+        </ul> 
+    </nav> 
+
+<section class="row">
+    <nav class="col-s-3">
+        <ul>
+            <li><a href="{{url_for('Chlamy_Gono')}}">Chlamydia & Gonorrhea Form</a></li>
+            <li><a href="{{url_for('CS')}}">Congenital Syphilis</a></li>
+           </ul> 
+    </nav>
+
+    <article class="col-s-8">
+
+        <form  method="post" action="Pages/registration.html" autocomplete="off">
+
+            <h4 style="text-align: center;">Massachusetts Department of Public Health<br>
+                Bureau of Infectious Disease and<br>
+                Laboratory Sciences
+            </h4>
+            <p style="text-align: center;">305 South Street, Room 563, Jamaica Plain, MA 02130<br>   
+                Phone: 617-983-6800 Confidential Fax: 617-983-6220</p> 
+                
+        <div style="float: right;">
+            <label>Received in Surveillance:</label><br>
+            <input type="date" name="date" id="date">
+        </div>
+        <h2>Hepatitis B Infected Pregnant Woman Reporting Form</h2>                
+        <h3 style= "background-color: #077df2; color: #ffffff; font-style: italic;">Confidential Case Report</h3>
+                <label for="firstname">First Name:</label>
+                <input id="firstname" name="firstname" type="text" maxlength="10" required/>&nbsp &nbsp 
+                
+                <label for="lastname">Last Name:</label>
+                <input id="lastname" name="lastname" type="text" required/>&nbsp &nbsp 
+
+                <label for="middlename">Middle Name:</label>
+                <input id="middlename" name="middlename" type="text" placeholder="optional"/>&nbsp &nbsp<br><br>
+                
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dod" name="date" required/>&nbsp&nbsp&nbsp&nbsp
+
+                <label for="edd">Estimated Delivery Date:&nbsp</label>
+                <input type="date" id="edd" name="date" required/>&nbsp&nbsp&nbsp&nbsp
+
+                <label for="status">
+                Patient aware of HepB+ status?:</label>
+                <input type="radio" name="status" value="status" id="status" required/>Yes
+                <input type="radio" name="status" value="status" id="status" required/>No
+                <input type="radio" name="status" value="status" id="status"/>Unk<br><br>
+
+
+                <label for="address">Address:</label>
+                <input type="string" class="input" required>&nbsp&nbsp&nbsp
+                <label for="city">City:</label>
+                <input type="string" class="input" required>&nbsp&nbsp&nbsp
+                <label for="state">State:</label>
+                <input type="string" class="input" required>&nbsp&nbsp&nbsp
+                <label for="zip">Zip:</label>
+                <input type="string" class="input"><br><br>
+
+                <label for="tel">Telephone Number:</label>
+                <input id="tel" name="tel" type="tel" placeholder="123-1234-1234">&nbsp &nbsp &nbsp &nbsp
+
+                <label for="ins">Type of Insurance:&nbsp</label>
+                <input type="radio" value="ins" name="ins"/>Private
+                <input type="radio" value="ins" name="ins"/>Medicaid
+                <input type="radio" value="ins" name="ins"/>Medicare
+                <input type="radio" value="ins" name="ins"/>Uninsured
+                <input type="radio" value="ins" name="ins"/>Unknown<br><br>
+
+                <label for="race">Race:</label>
+                <input type="radio" value="race" name="race"/>American Indian/Alaskan Native
+                <input type="radio" value="race" name="race"/>Native Hawaiian/Pacific Islander
+                <input type="radio" value="race" name="race"/>Asian
+                <input type="radio" value="race" name="race"/>White
+                <input type="radio" value="race" name="race"/>Black/African Am.
+                <input type="radio" value="race" name="race"/>Other
+                <input type="radio" value="race" name="race"/>Unk<br><br>
+
+                <label for="race">Hispanic:</label>
+                <input type="radio" value="race" name="race"/>Yes
+                <input type="radio" value="race" name="race"/>No
+                <input type="radio" value="race" name="race"/>Unk &nbsp&nbsp&nbsp
+
+                <label for="country">Country of Birth:</label>
+                <input type="string" class="input" required>&nbsp&nbsp&nbsp
+                <label for="language">Primary Language:</label>
+                <input type="string" class="input"><br><br>
+                Check if Interpreter Needed:<input type="checkbox" value="" name="interpreter"/><br><br>
+
+        <h3 style= "background-color: #077df2; color: #ffffff;">LABORATORY INFORMATION</h3> 
+    
+                <label for="results">Laboratory Results: Check off below any POSITIVE labs <u>and</u> attach positive Hep B lab results</label><br><br>
+                <input type="radio" value="results" name="results"/>HBsAg (Hep B surface antigen)&nbsp&nbsp
+                <input type="radio" value="results" name="results"/>IgM anti-HBc (IgM antibody to Hep B core antigen)&nbsp&nbsp
+                <input type="radio" value="results" name="results"/>HBeAg (Hep Be antigen)<br><br>
+                <input type="radio" value="results" name="results"/>HBV DNA (Hep B virus DNA)
+
+        <h3 style= "background-color: #077df2; color: #ffffff;">CLINICAL INFORMATION</h3> 
+
+    <label for="provider">Provider Type</label><br>
+                <input type="radio" value="provider" name="provider"/>MD/DO
+                <input type="radio" value="provider" name="provider"/>CNM/NP
+                <input type="radio" value="provider" name="provider"/>PA<br><br>
+
+                <label for="lastname">OB Provider Last Name:</label>
+                <input id="lastname" name="lastname" type="text" maxlength="10" required/>&nbsp &nbsp&nbsp&nbsp&nbsp
+                <label for="firstname">OB Provider First Name:</label>
+                <input id="firstname" name="firstname" type="text" maxlength="10" required/><br><br>
+                <label for="facility">Expected Delivery Facility:</label>
+                <input type="string" class="input">&nbsp&nbsp&nbsp
+                <label for="facility">Reporting Health Care Facility:&nbsp</label>&nbsp
+                <input type="string" class="input" required><br><br>
+                <label for="address">Address:</label>
+                <input type="string" class="input" required>&nbsp&nbsp&nbsp
+                <label for="city">City:</label>
+                <input type="string" class="input" required>&nbsp&nbsp&nbsp
+                <label for="state">State:</label>
+                <input type="string" class="input" required>&nbsp&nbsp&nbsp
+                <label for="zip">Zip:</label>
+                <input type="string" class="input"><br><br>
+                <label for="contact_person">Contact Person at Reporting Facility:</label>
+                <input type="string" class="input" required><br><br>
+
+                <label for="tel">Direct Phone:</label>
+                <input id="tel" name="tel" type="tel" placeholder="(123)123-1234 *1234">&nbsp &nbsp&nbsp&nbsp&nbsp
+
+                <label for="date">Date Form Completed:</label>
+                <input type="date" id="date" name="date" required/>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <input type="checkbox" value="lab" name="lab"/>Positive Labs Attached<br><br>
+
+                <p style="text-align: center;"><input type="submit" value="Submit"></p>
+                
+            </form>
+                
+        </article>
+                
+ </section>
+
+ {% endblock content %}
+ {% block footer %}
+ {{super()}}
+ {% endblock footer %}
