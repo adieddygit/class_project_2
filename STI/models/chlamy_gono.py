@@ -63,7 +63,7 @@ class GonoTreatment(BaseModel, Base):
     other_treatment:Mapped[str] = mapped_column(DateTime)
     date_of_other_treatment:Mapped[str] = mapped_column(DateTime)
 
-class GonoTreatment(BaseModel, Base):
+class ChlamydiaTreatment(BaseModel, Base):
     __tablename__ = 'chlamydia_treatment'
     id:Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
     created_at:Mapped[datetime] = mapped_column(DateTime, default=datetime.now())
